@@ -14,6 +14,9 @@
                 new Skill { Id = 2, Name = "Iron Fist", Damage = 75 },
                 new Skill { Id = 3, Name = "Ice Wind", Damage = 200 }
             );
+
+            modelBuilder.Entity<User>()
+                .Property(user => user.Role).HasDefaultValue("Player");
         }
 
         public DbSet<Character> Characters => Set<Character>();

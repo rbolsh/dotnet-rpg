@@ -5,7 +5,7 @@ using System.Security.Claims;
 
 namespace dotnet_rpg.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Player,Admin")]
     [ApiController]
     [Route("api/[controller]")]
     public class CharacterController : ControllerBase
